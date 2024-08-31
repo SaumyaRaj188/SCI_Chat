@@ -3,6 +3,7 @@ from api import get_response
 import speech_recognition as sr
 import os
 from gtts import gTTS
+from playsound import playsound
 
 
 st.set_page_config(page_title="Supreme Court of India Chatbot", layout="wide")
@@ -70,7 +71,8 @@ if voice_button.button("🎤 Speak"):
         if tts_button:
             myobj = gTTS(text=response,slow=False)
             myobj.save("speech.mp3")
-            os.system("start speech.mp3")
+            playsound('speech.mp3')
+            # os.system("start speech.mp3")
             # os.system("mpg321 welcome.mp3")   #for linux
 
         st.rerun()
@@ -89,7 +91,8 @@ if prompt := st.chat_input("Ask Something:"):
     if tts_button:
         myobj = gTTS(text=response,slow=False)
         myobj.save("speech.mp3")
-        os.system("start speech.mp3")
+        playsound('speech.mp3')
+        # os.system("start speech.mp3")
         # os.system("mpg321 welcome.mp3")   #for linux
 
     st.rerun()
