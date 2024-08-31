@@ -100,8 +100,6 @@ if prompt := st.chat_input("Ask Something:"):
         myobj.save("speech.mp3")
         pygame.mixer.music.load("speech.mp3")
         pygame.mixer.music.play()
-        while pygame.mixer.music.get_busy(): # check if the file is playing
-            pass
         while pygame.mixer.music.get_busy():
             continue
         pygame.mixer.music.load("sound.mp3")
