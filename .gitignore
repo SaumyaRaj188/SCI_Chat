@@ -162,4 +162,4 @@ cython_debug/
 #.idea/
 
 temp.py
-*.mp3
+speech.mp3

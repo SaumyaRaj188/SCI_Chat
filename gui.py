@@ -74,7 +74,9 @@ if voice_button.button("🎤 Speak"):
             myobj.save("speech.mp3")
             pygame.mixer.music.load("speech.mp3")
             pygame.mixer.music.play()
-            pygame.mixer.music.play(0)
+            while pygame.mixer.music.get_busy():
+                continue
+            pygame.mixer.music.load("sound.mp3")
             os.remove("speech.mp3")
             # playsound('speech.mp3')
             # os.system("start speech.mp3")
@@ -98,7 +100,11 @@ if prompt := st.chat_input("Ask Something:"):
         myobj.save("speech.mp3")
         pygame.mixer.music.load("speech.mp3")
         pygame.mixer.music.play()
-        pygame.mixer.music.play(0)
+        while pygame.mixer.music.get_busy(): # check if the file is playing
+            pass
+        while pygame.mixer.music.get_busy():
+            continue
+        pygame.mixer.music.load("sound.mp3")
         os.remove("speech.mp3")
         # playsound('speech.mp3')
         # os.system("start speech.mp3")
