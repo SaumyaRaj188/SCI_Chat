@@ -70,14 +70,18 @@ if voice_button.button("🎤 Speak"):
         st.session_state.messages.append({"role": "assistant", "content": response})
 
         if tts_button:
-            myobj = gTTS(text=response,slow=False)
-            myobj.save("speech.mp3")
-            pygame.mixer.music.load("speech.mp3")
-            pygame.mixer.music.play()
-            while pygame.mixer.music.get_busy():
-                continue
-            pygame.mixer.music.load("sound.mp3")
-            os.remove("speech.mp3")
+            try:
+                myobj = gTTS(text=response,slow=False)
+                myobj.save("speech.mp3")
+                pygame.mixer.music.load("speech.mp3")
+                pygame.mixer.music.play()
+                while pygame.mixer.music.get_busy():
+                    continue
+                pygame.mixer.music.load("sound.mp3")
+                os.remove("speech.mp3")
+
+            except:
+                pass
             # playsound('speech.mp3')
             # os.system("start speech.mp3")
             # os.system("mpg321 welcome.mp3")   #for linux
@@ -94,16 +98,20 @@ if prompt := st.chat_input("Ask Something:"):
         response = get_response(user="frontend", prompt=prompt)
         st.markdown(response)
     st.session_state.messages.append({"role": "assistant", "content": response})
-
+    
     if tts_button:
-        myobj = gTTS(text=response,slow=False)
-        myobj.save("speech.mp3")
-        pygame.mixer.music.load("speech.mp3")
-        pygame.mixer.music.play()
-        while pygame.mixer.music.get_busy():
-            continue
-        pygame.mixer.music.load("sound.mp3")
-        os.remove("speech.mp3")
+        try:
+            myobj = gTTS(text=response,slow=False)
+            myobj.save("speech.mp3")
+            pygame.mixer.music.load("speech.mp3")
+            pygame.mixer.music.play()
+            while pygame.mixer.music.get_busy():
+                continue
+            pygame.mixer.music.load("sound.mp3")
+            os.remove("speech.mp3")
+            
+        except:
+            pass
         # playsound('speech.mp3')
         # os.system("start speech.mp3")
         # os.system("mpg321 welcome.mp3")   #for linux
