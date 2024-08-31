@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 ### Step 3: Create GEMINI_API_KEY
 ```
-echo GEMINI_API_KEY="YOUR API KEY" > .env
+echo 'GEMINI_API_KEY="YOUR_API_KEY"' | Out-File -Encoding UTF8 .env
 ```
 
 
