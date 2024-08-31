@@ -4,7 +4,8 @@ import speech_recognition as sr
 import os
 from gtts import gTTS
 from playsound import playsound
-
+import pygame
+pygame.mixer.init()
 
 st.set_page_config(page_title="Supreme Court of India Chatbot", layout="wide")
 st.markdown(
@@ -71,7 +72,10 @@ if voice_button.button("🎤 Speak"):
         if tts_button:
             myobj = gTTS(text=response,slow=False)
             myobj.save("speech.mp3")
-            playsound('speech.mp3')
+            pygame.mixer.music.load("speech.mp3")
+            pygame.mixer.music.play()
+            pygame.mixer.music.play(0)
+            # playsound('speech.mp3')
             # os.system("start speech.mp3")
             # os.system("mpg321 welcome.mp3")   #for linux
 
@@ -91,7 +95,10 @@ if prompt := st.chat_input("Ask Something:"):
     if tts_button:
         myobj = gTTS(text=response,slow=False)
         myobj.save("speech.mp3")
-        playsound('speech.mp3')
+        pygame.mixer.music.load("speech.mp3")
+        pygame.mixer.music.play()
+        pygame.mixer.music.play(0)
+        # playsound('speech.mp3')
         # os.system("start speech.mp3")
         # os.system("mpg321 welcome.mp3")   #for linux
 
