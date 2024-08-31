@@ -3,7 +3,7 @@ from api import get_response
 import speech_recognition as sr
 import os
 from gtts import gTTS
-from playsound import playsound
+# from playsound import playsound
 import pygame
 pygame.mixer.init()
 

@@ -4,4 +4,4 @@ SpeechRecognition
 google-generativeai
 python-dotenv
 PyMuPDF
-playsound
+pygame
