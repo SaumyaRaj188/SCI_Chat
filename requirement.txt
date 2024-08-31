@@ -1,0 +1,6 @@
+streamlit
+gTTS
+SpeechRecognition
+google-generativeai
+python-dotenv
+PyMuPDF
