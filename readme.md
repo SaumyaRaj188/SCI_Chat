@@ -1,11 +1,17 @@
 # SCI Chat
 ## Supreme Court of India Chatbot
 
-Some Description
 
-### Features:
-- Feature 1
-- Feature 2 ...
+### Description
+An AI-powered chatbot that enhances access to Supreme Court of India documents by overcoming navigation challenges, inefficiencies, and language barriers.
+
+### Key Features
+- **Multilingual Support**: Processes text and voice commands in 22 scheduled languages using Google TTS.
+- **Interactive Interface**: Built with Streamlit for seamless user interaction and engagement.
+- **Natural Language Understanding**: Uses Gemini for query processing and converting user input into actionable data.
+- **Efficient Document Retrieval**: Retrieves case documents based on metadata like diary number, year, and type using PyMuPDF.
+- **Real-Time Processing**: Backend logic in Python ensures quick and accurate responses.
+- **Scalable and Cost-Effective**: Utilizes open-source tools and a maintainable architecture for low-cost, high-performance operation.
 
 
 
