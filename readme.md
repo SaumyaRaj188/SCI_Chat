@@ -15,7 +15,7 @@ An AI-powered chatbot that enhances access to Supreme Court of India documents b
 
 
 
-## Installation
+## Installation:
 ### Step 1: Clone directory
 ```
 git clone https://github.com/SaumyaRaj188/SCI_Chat.git
@@ -32,7 +32,7 @@ echo 'GEMINI_API_KEY="YOUR_API_KEY"' | Out-File -Encoding UTF8 .env
 ```
 
 
-## Usage
+## Usage:
 ```
 streamlit run gui.py
 ```
